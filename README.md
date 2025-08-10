@@ -45,6 +45,28 @@ cd birthday-card-website
 7. Click "Deploy site"
 8. Your site will be available at a Netlify URL (e.g., `https://your-site-name.netlify.app`)
 
+### Automatic deploys after PR merge (GitHub Actions → Netlify)
+
+This repo includes a GitHub Actions workflow that builds with Vite and deploys to Netlify on pushes to `main`.
+
+Setup steps:
+
+1. In Netlify, create a new site and grab the following:
+  - Site ID: Site settings → General → Site details → Site ID
+  - Personal access token: User settings → Applications → New access token
+2. In your GitHub repo, go to Settings → Secrets and variables → Actions → New repository secret, and add:
+  - `NETLIFY_SITE_ID` = your Netlify Site ID
+  - `NETLIFY_AUTH_TOKEN` = your Netlify personal access token
+3. Ensure your default branch is `main`. When a PR is merged to `main`, the workflow will:
+  - Install deps
+  - Build the site (`npm run build`)
+  - Deploy the contents of `dist` to Netlify production
+
+Notes:
+- The workflow file is at `.github/workflows/deploy-netlify.yml`.
+- `netlify.toml` is included to mirror the same build and publish settings on Netlify.
+- If you use a different Node version or build output directory, update the workflow accordingly.
+
 ### Custom Domain (Optional)
 
 1. In your Netlify dashboard, go to "Domain settings"
