@@ -45,6 +45,7 @@ cd birthday-card-website
 7. Click "Deploy site"
 8. Your site will be available at a Netlify URL (e.g., `https://your-site-name.netlify.app`)
 
+
 ### Automatic deploys after PR merge (GitHub Actions → Netlify)
 
 This repo includes a GitHub Actions workflow that builds with Vite and deploys to Netlify on pushes to `main`.
