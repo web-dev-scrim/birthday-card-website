@@ -2,11 +2,15 @@ body {
     text-align: center;
     font-family: "Sour Gummy", sans-serif;
     font-size: medium;
-    background: linear-gradient(#6BA292, #EAF3EC);
+    background: linear-gradient(#6ba292, #eaf3ec);
     color: black;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     text-shadow: 0 0 1px black;
 }
 
@@ -19,7 +23,7 @@ h1, h2, h3, h4, p {
 }
 
 #bday-age {
-    background: #FCCB06;
+    background: #fccb06;
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px 0 10px 0;
@@ -28,7 +32,7 @@ h1, h2, h3, h4, p {
 
 #bday-date {
     margin: 0;
-    background: #FCCB06;
+    background: #fccb06;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 1.2em;
